@@ -1,10 +1,22 @@
-import logo from './logo.svg';
+import  {Switch, Route} from 'react-router-dom';
+import Navigation from './components/Navigation/Navigation';
+import MoviesPage from './components/Movies/MoviesPage';
+import HomePage from './components/HomePage/HomePage';
+
+// npm ci
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Navigation/>
+      <Route path="/">
+        <HomePage/>
+      </Route>
+      <Route path="/movies">
+        <MoviesPage/>
+      </Route>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +29,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
