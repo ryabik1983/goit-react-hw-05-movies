@@ -9,8 +9,8 @@ import {
 import * as api from '../Api/api-servise';
 import styles from './MovieDetailsPage.module.scss';
 
-// const Cast = lazy(() => import('../Cast/Cast'));
-// const Reviews = lazy(() => import('../Reviews/Reviews'));
+const Cast = lazy(() => import('../Cast/Cast'));
+const Reviews = lazy(() => import('../Reviews/Reviews'));
 
 export default function MovieDetailsPage() {
   const [movie, setMovie] = useState(null);
@@ -99,10 +99,10 @@ export default function MovieDetailsPage() {
             </ul>
           </Suspense>
         </div>
-        {/* <Routes>
+        <Routes>
           <Route path="/cast" element={<Cast id={id} />}></Route>
           <Route path="/reviews" element={<Reviews id={id} />}></Route>
-        </Routes> */}
+        </Routes>
       </div>
     )
   );
