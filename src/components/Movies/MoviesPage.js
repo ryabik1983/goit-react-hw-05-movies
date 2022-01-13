@@ -57,7 +57,7 @@ export default function MoviesPage() {
           go back
         </button>
         <input
-          placeholder={paramsQuery ? paramsQuery : 'Please enter your query'}
+          placeholder={paramsQuery ? paramsQuery : 'Please, enter your query'}
           className={styles.input}
           onChange={e => {
             handleChangeValue(e);
