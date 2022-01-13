@@ -7,18 +7,18 @@ import {
   useNavigate,
 } from 'react-router-dom';
 import * as api from '../Api/api-servise';
-import styles from './MoviesDescriptionPage.module.scss';
+import styles from './MovieDetailsPage.module.scss';
 
 // const Cast = lazy(() => import('../Cast/Cast'));
 // const Reviews = lazy(() => import('../Reviews/Reviews'));
 
-export default function MoviesDescriptionPage() {
+export default function MovieDetailsPage() {
   const [movie, setMovie] = useState(null);
   const navigate = useNavigate();
 
   const id = useParams().movieId;
   useEffect(() => {
-    api.getDescriptionMovie(id).then(setMovie);
+    api.getDetailsMovie(id).then(setMovie);
   }, [id]);
 
   function handleBack(e) {

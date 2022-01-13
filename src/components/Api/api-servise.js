@@ -29,7 +29,7 @@ export function getParams() {
   return { paramsQ, paramsP };
 }
 
-export function getDescriptionMovie(id) {
+export function getDetailsMovie(id) {
   return fetchMovies(
     `https://api.themoviedb.org/3/movie/${id}?${KEY}&language=en-US`,
   );
