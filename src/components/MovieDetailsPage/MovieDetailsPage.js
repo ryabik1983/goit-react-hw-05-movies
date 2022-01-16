@@ -9,8 +9,8 @@ import {
 import * as api from '../Api/api-servise';
 import styles from './MovieDetailsPage.module.scss';
 
-const Cast = lazy(() => import('../Cast/Cast'));
-const Reviews = lazy(() => import('../Reviews/Reviews'));
+const Cast = lazy(() => import('../Cast/Cast.js'));
+const Reviews = lazy(() => import('../Reviews/Reviews.js'));
 
 export default function MovieDetailsPage() {
   const [movie, setMovie] = useState(null);
