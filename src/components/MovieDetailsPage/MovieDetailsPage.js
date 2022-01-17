@@ -5,18 +5,22 @@ import {
   Route,
   Routes,
   useNavigate,
+  // useRouteMatch
 } from 'react-router-dom';
 import * as api from '../Api/api-servise';
 import styles from './MovieDetailsPage.module.scss';
+
 
 const Cast = lazy(() => import('../Cast/Cast.js'));
 const Reviews = lazy(() => import('../Reviews/Reviews.js'));
 
 export default function MovieDetailsPage() {
+  // const match = useRouteMatch();
+
   const [movie, setMovie] = useState(null);
   const navigate = useNavigate();
-
   const id = useParams().movieId;
+  // console.log (match);
   useEffect(() => {
     api.getDetailsMovie(id).then(setMovie);
   }, [id]);
