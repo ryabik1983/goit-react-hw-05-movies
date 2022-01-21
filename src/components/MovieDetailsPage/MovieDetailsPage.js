@@ -7,7 +7,7 @@ import {
   useNavigate,
   // useRouteMatch
 } from 'react-router-dom';
-import * as api from '../Api/api-servise';
+import * as api from '../../api/api-servise';
 import styles from './MovieDetailsPage.module.scss';
 
 
@@ -53,7 +53,7 @@ export default function MovieDetailsPage() {
                 width="300"
               ></img>
             ) : (
-              <img src="/noPhoto.jpg" alt={id} width="300"></img>
+              <img src="/noPhoto.jpg" alt={id} width="300"/>
             )}
           </div>
           <div className={styles.movieDescription}>

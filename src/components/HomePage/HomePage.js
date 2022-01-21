@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Container, Pagination, Stack } from '@mui/material';
-import * as api from '../Api/api-servise';
-// import MoviesList from '../MoviesList/MoviesList';
+import * as api from '../../api/api-servise';
+import MoviesList from '../MoviesList/MoviesList';
 import styles from './HomePage.module.scss';
 
 export default function HomePage() {
@@ -19,11 +19,11 @@ export default function HomePage() {
 
   return (
     <>
-      {/* {movies && (
+      {movies && (
         <ul className={styles.list}>
           <MoviesList dataMovies={movies.results} />
         </ul>
-      )} */}
+      )}
       <Container maxWidth="md">
         <Stack spacing={2}>
           {!!pageQty && (

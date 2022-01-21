@@ -23,13 +23,12 @@ export default function App() {
       >
         <Navigation />
         <Routes>
-          <Route path="/" element={<HomePage />} exact></Route>
-          <Route path="/movies" element={<MoviesPage />}></Route>
+          <Route path="/" element={<HomePage />} exact/>
+          <Route path="/movies" element={<MoviesPage />}/>
           <Route
             path="/movies/:movieId/*"
-            element={<MovieDetailsPage />}
-          ></Route>
-          <Route path="*" element={<HomePage />}></Route>
+            element={<MovieDetailsPage />}/>
+          <Route path="*" element={<HomePage />}/>
         </Routes>
       </Suspense>
     </div>

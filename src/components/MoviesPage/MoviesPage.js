@@ -1,4 +1,4 @@
-import * as api from '../Api/api-servise';
+import * as api from '../../api/api-servise';
 import styles from './MoviesPage.module.scss';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -35,7 +35,7 @@ export default function MoviesPage() {
     setValue(e.target.value.trim());
   }
 
-  function handleBack(e) {
+  function handleBack() {
     navigate('/');
   }
 
@@ -50,9 +50,7 @@ export default function MoviesPage() {
         <button
           className={styles.GoBackBtn}
           type="button"
-          onClick={e => {
-            handleBack(e);
-          }}
+          onClick={handleBack}
         >
           go back
         </button>

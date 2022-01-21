@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import * as api from '../Api/api-servise';
+import * as api from '../../api/api-servise';
 import styles from './Reviews.module.scss';
 
 export default function Reviews({ id }) {
